@@ -129,18 +129,13 @@ const adminSignup = async (req, res) => {
 
             });
 
-
-
-
         }
         else {
             res.status(500).json({ message: "secret did not match" })
         }
-
-
     }
     else {
-        res.status(300).json({ message: "secret field is require to create admin" })
+        res.status(300).json({ message: "secret field is required  to create admin" })
     }
 
 
