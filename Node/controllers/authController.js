@@ -133,7 +133,9 @@ const adminSignup = async (req, res) => {
 
 
         }
-     
+        else {
+            res.status(500).json({ message: "secret did not match" })
+        }
 
 
     }
