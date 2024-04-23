@@ -13,14 +13,11 @@ db.connect(err => {
 });
 
 class User {
-
-//user methods-------->
-
-    static createUser(userData, callback) {
+    //user methods-------->
+static createUser(userData, callback) {
         const query = 'INSERT INTO user (name, phone, email, password) VALUES (?, ?, ?, ?)';
 
         db.query(query, [userData.name, userData.phone, userData.email, userData.password], (err, result) => {
-
             
             if (err) return callback(err);
             console.log("i am working 1 ")
@@ -40,9 +37,6 @@ class User {
             }
         });
     }
-
-
-
 
 
 //admin methods---------------->
